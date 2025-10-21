@@ -5,6 +5,7 @@ Question: What are the most in-demand skills for data analysts?
 - Focus on all job postings.
 - Why? Retrieves the top 5 skills with the highest demand in the job market,
   providing insights into the most valuable skills for job seekers.
+  
 */
 
 
@@ -18,7 +19,7 @@ WHERE
     job_title_short = 'Data Analyst' AND
     job_work_from_home = TRUE
 GROUP BY
-    skills
+    skills 
 ORDER BY
     demand_count DESC
 LIMIT 5;
